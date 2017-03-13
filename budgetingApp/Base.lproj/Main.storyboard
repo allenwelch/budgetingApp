@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -46,16 +46,29 @@
                                 <state key="normal" title="Budgeting">
                                     <color key="titleColor" red="1" green="0.0" blue="0.93591099560000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="V8J-u0-7Q6" kind="show" id="zBI-ha-Fdk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTW-LU-nWJ">
                                 <rect key="frame" x="115" y="713" width="129" height="129"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="MinusSign"/>
+                                <connections>
+                                    <segue destination="z5a-9s-xdJ" kind="popoverPresentation" identifier="Minus" popoverAnchorView="CTW-LU-nWJ" id="BEY-gI-Zs8">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZy-ts-TWi">
                                 <rect key="frame" x="539" y="714" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="PlusSign"/>
+                                <connections>
+                                    <segue destination="z5a-9s-xdJ" kind="popoverPresentation" identifier="Plus" popoverAnchorView="bZy-ts-TWi" id="vls-2L-lY6">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Now Have: $0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LG-9R-KnB">
                                 <rect key="frame" x="156" y="429" width="456" height="74"/>
@@ -67,15 +80,20 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="nowHaveLBL" destination="3LG-9R-KnB" id="YlF-CB-lzI"/>
+                        <outlet property="spentAmountLBL" destination="kM3-KG-0pg" id="cLQ-gl-Ld3"/>
+                        <outlet property="totalAmountLBL" destination="r1v-Ch-4HB" id="kNg-oM-WdF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.96875" y="123.63281249999999"/>
         </scene>
-        <!--View Controller-->
+        <!--Pop Up Add Purchases View Controller-->
         <scene sceneID="u6n-GP-GX9">
             <objects>
-                <viewController id="z5a-9s-xdJ" sceneMemberID="viewController">
+                <viewController id="z5a-9s-xdJ" customClass="PopUpAddPurchasesViewController" customModule="budgetingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sx6-vz-aco"/>
                         <viewControllerLayoutGuide type="bottom" id="5e6-Qm-ZIp"/>
@@ -92,11 +110,17 @@
                                 <rect key="frame" x="331" y="27" width="73" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="PlusSign"/>
+                                <connections>
+                                    <action selector="plusButton:" destination="z5a-9s-xdJ" eventType="touchUpInside" id="gtN-DC-dFi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xab-ay-UXL">
                                 <rect key="frame" x="238" y="28" width="73" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="MinusSign"/>
+                                <connections>
+                                    <action selector="minusButton:" destination="z5a-9s-xdJ" eventType="touchUpInside" id="I5D-pE-rJd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMv-p6-RZk">
                                 <rect key="frame" x="20" y="28" width="65" height="45"/>
@@ -108,7 +132,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dollar Amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9c-vY-nkp">
                                 <rect key="frame" x="42" y="146" width="114" height="21"/>
@@ -136,6 +160,12 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="450" height="300"/>
+                    <connections>
+                        <outlet property="dollarTextField" destination="okV-GT-Nms" id="aBr-Xu-FaM"/>
+                        <outlet property="minusView" destination="xab-ay-UXL" id="GrH-Xy-HBB"/>
+                        <outlet property="nameTextField" destination="rvK-Fr-QFr" id="jWN-hY-uoh"/>
+                        <outlet property="plusView" destination="nZ6-Fy-3q3" id="zpo-gv-vUv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n3l-qf-H25" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -196,10 +226,10 @@
             </objects>
             <point key="canvasLocation" x="-403.90625" y="854.296875"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit View Controller-->
         <scene sceneID="1Dg-Cd-L08">
             <objects>
-                <viewController id="How-jD-K3S" sceneMemberID="viewController">
+                <viewController id="How-jD-K3S" customClass="EditViewController" customModule="budgetingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ko0-No-mad"/>
                         <viewControllerLayoutGuide type="bottom" id="5w5-qn-iAZ"/>
@@ -260,10 +290,10 @@
             </objects>
             <point key="canvasLocation" x="792.96875" y="776.953125"/>
         </scene>
-        <!--View Controller-->
+        <!--Graph View Controller-->
         <scene sceneID="MLx-GH-sXZ">
             <objects>
-                <viewController id="V8J-u0-7Q6" sceneMemberID="viewController">
+                <viewController id="V8J-u0-7Q6" customClass="GraphViewController" customModule="budgetingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z4O-t3-C8Y"/>
                         <viewControllerLayoutGuide type="bottom" id="ALB-8b-6H1"/>
@@ -340,6 +370,9 @@
                                 <rect key="frame" x="71" y="613" width="75" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="arrowLeft"/>
+                                <connections>
+                                    <action selector="leftButton:" destination="V8J-u0-7Q6" eventType="touchUpInside" id="y75-Sq-Tm4"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goal: $0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2F-dE-JCy">
                                 <rect key="frame" x="182" y="627" width="404" height="87"/>
@@ -352,6 +385,9 @@
                                 <rect key="frame" x="617" y="613" width="75" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="arrowRight"/>
+                                <connections>
+                                    <action selector="rightButton:" destination="V8J-u0-7Q6" eventType="touchUpInside" id="0gD-Ye-UAe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJU-cT-gJs">
                                 <rect key="frame" x="219" y="742" width="331" height="66"/>
@@ -376,11 +412,17 @@
                                 <state key="normal" title="Edit">
                                     <color key="titleColor" red="1" green="0.0" blue="0.93591099560000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="How-jD-K3S" kind="show" id="Mf2-Hg-6iY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idp-aa-m2g">
                                 <rect key="frame" x="27" y="32" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="arrowLeft"/>
+                                <connections>
+                                    <action selector="backButton:" destination="V8J-u0-7Q6" eventType="touchUpInside" id="buo-Gg-71L"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Graph View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vr8-uV-5Jz">
                                 <rect key="frame" x="121" y="58" width="527" height="78"/>
@@ -399,15 +441,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="leftButtonView" destination="K3M-OL-qZZ" id="352-3C-f1K"/>
+                        <outlet property="rightButtonView" destination="scB-eR-uEy" id="Aii-h5-NxS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="28I-rf-v70" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="792.96875" y="123.63281249999999"/>
         </scene>
-        <!--View Controller-->
+        <!--Pop Up Purchases View Controller-->
         <scene sceneID="QcH-N4-uFq">
             <objects>
-                <viewController id="koF-HW-O2f" sceneMemberID="viewController">
+                <viewController id="koF-HW-O2f" customClass="PopUpPurchasesViewController" customModule="budgetingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="APt-Oo-0cu"/>
                         <viewControllerLayoutGuide type="bottom" id="4HE-ib-QWA"/>
@@ -468,4 +514,7 @@
         <image name="arrowLeft" width="225" height="225"/>
         <image name="arrowRight" width="225" height="225"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="BEY-gI-Zs8"/>
+    </inferredMetricsTieBreakers>
 </document>
