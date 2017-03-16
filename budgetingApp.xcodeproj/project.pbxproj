@@ -20,6 +20,7 @@
 		08C620251E7336FF00924B49 /* PopUpAddPurchasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C620241E7336FF00924B49 /* PopUpAddPurchasesViewController.swift */; };
 		08C620271E73379D00924B49 /* CatagoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C620261E73379D00924B49 /* CatagoryViewController.swift */; };
 		08C620291E733DFC00924B49 /* savedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C620281E733DFC00924B49 /* savedValues.swift */; };
+		08C6202B1E76EA6600924B49 /* PopUpDollarOnlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6202A1E76EA6600924B49 /* PopUpDollarOnlyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		08C620241E7336FF00924B49 /* PopUpAddPurchasesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpAddPurchasesViewController.swift; sourceTree = "<group>"; };
 		08C620261E73379D00924B49 /* CatagoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatagoryViewController.swift; sourceTree = "<group>"; };
 		08C620281E733DFC00924B49 /* savedValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = savedValues.swift; sourceTree = "<group>"; };
+		08C6202A1E76EA6600924B49 /* PopUpDollarOnlyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpDollarOnlyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				08C620201E73276600924B49 /* EditViewController.swift */,
 				08C620221E7327B200924B49 /* PopUpPurchasesViewController.swift */,
 				08C620241E7336FF00924B49 /* PopUpAddPurchasesViewController.swift */,
+				08C6202A1E76EA6600924B49 /* PopUpDollarOnlyViewController.swift */,
 				08C620261E73379D00924B49 /* CatagoryViewController.swift */,
 				08C61FF41E72FE0200924B49 /* Main.storyboard */,
 				08C61FF71E72FE0200924B49 /* Assets.xcassets */,
@@ -282,6 +285,7 @@
 			files = (
 				08C620251E7336FF00924B49 /* PopUpAddPurchasesViewController.swift in Sources */,
 				08C620271E73379D00924B49 /* CatagoryViewController.swift in Sources */,
+				08C6202B1E76EA6600924B49 /* PopUpDollarOnlyViewController.swift in Sources */,
 				08C620211E73276600924B49 /* EditViewController.swift in Sources */,
 				08C6201F1E73268F00924B49 /* GraphViewController.swift in Sources */,
 				08C620231E7327B200924B49 /* PopUpPurchasesViewController.swift in Sources */,
@@ -538,6 +542,7 @@
 				08C620171E72FE0200924B49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		08C620181E72FE0200924B49 /* Build configuration list for PBXNativeTarget "budgetingAppTests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +551,7 @@
 				08C6201A1E72FE0200924B49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		08C6201B1E72FE0200924B49 /* Build configuration list for PBXNativeTarget "budgetingAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -554,6 +560,7 @@
 				08C6201D1E72FE0200924B49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

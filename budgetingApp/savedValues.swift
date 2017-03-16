@@ -10,11 +10,14 @@ import Foundation
 
 class SavedValues{
     static var saved = SavedValues()
-    var totalAmount : Double = 0.0
-    var spentAmount : Double = 0.0
-    var haveAmount : Double = 0.0
+    var totalAmount : Double = 0.00
+    var spentAmount : Double = 0.00
+    var haveAmount : Double = 0.00
+    var goal : Double = 0.00
     var cata : [String] = ["Food", "Car", "House", "Pets", "Entertainment", "Bills", "Tax", "Gifts"]
-    var nameItems : [String]?
-    var costItems : [Double]?
+    var nameItems = [String]()
+    var costItems = [Double]()
+    var itemsCataNum = [Int]()
+    var catasToatalCOst = [0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00]
     
 }
